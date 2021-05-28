@@ -1,0 +1,36 @@
+{
+  "name": "github-take-home-test",
+  "version": "1.0.0",
+  "description": "basic test about github history commits",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caborryer/GitHub-take-home-test.git"
+  },
+  "keywords": [
+    "Node",
+    "js",
+    "GitHub",
+    "api"
+  ],
+  "author": "Andrea Corrales",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/caborryer/GitHub-take-home-test/issues"
+  },
+  "homepage": "https://github.com/caborryer/GitHub-take-home-test#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "dotenv-safe": "^8.2.0",
+    "express": "^4.17.1",
+    "http-status": "^1.5.0",
+    "log4js": "^6.3.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.7"
+  }
+}
