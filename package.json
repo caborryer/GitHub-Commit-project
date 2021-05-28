@@ -3,8 +3,14 @@
   "version": "1.0.0",
   "description": "basic test about github history commits",
   "main": "index.js",
+  "type": "module",
+  
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start:dev": "nodemon src/server.js --exec babel-node",
+    "build": "babel src --out-dir dist",
+    "build:dev": "babel src --out-dir dist --source-maps",
+    "start": "node dist/server.js",
+    "start:pm2": "pm2 delete dev-services && pm2 start dist/server.js --name dev-services"
   },
   "repository": {
     "type": "git",
@@ -23,7 +29,11 @@
   },
   "homepage": "https://github.com/caborryer/GitHub-take-home-test#readme",
   "dependencies": {
+    "@babel/plugin-transform-runtime": "^7.14.3",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/runtime": "^7.14.0",
     "axios": "^0.21.1",
+    "colors": "^1.4.0",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "dotenv-safe": "^8.2.0",
@@ -32,5 +42,13 @@
     "log4js": "^6.3.0",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.7"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.3",
+    "@babel/core": "^7.14.3",
+    "@babel/node": "^7.14.2",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/preset-env": "^7.14.2",
+    "eslint": "^7.27.0"
   }
 }
