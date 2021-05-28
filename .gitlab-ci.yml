@@ -1,0 +1,53 @@
+stages:
+  - install
+  - build
+  - deploy
+
+install:
+  stage: install
+  script:
+    - yarn install
+  artifacts:
+    expire_in: 1h
+    paths:
+      - node_modules/
+  cache:
+    paths:
+      - node_modules/
+  only:
+    - develop
+
+    
+build:
+  stage: build
+  variables:
+    BUILD_CONFIG: 'dev'
+  dependencies:
+    - install
+  script:
+    - cp -r /srv/development/bancolombia-backend/.env .
+    - CI=false yarn build
+  artifacts:
+    expire_in: 1h
+    paths:
+      - dist/
+      - node_modules/
+  cache:
+    paths:
+      - dist/
+      - node_modules/
+  only:
+    - develop
+
+
+
+deploy:
+  stage: deploy
+  dependencies:
+    - build
+  script:
+    - cp -r /srv/development/bancolombia-backend/.env .
+    - ln -s /srv/development/bancolombia/images public/
+    - yarn start:pm2
+  only:
+    - develop
