@@ -1,1 +1,0 @@
-# GitHub-take-home-test
