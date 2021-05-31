@@ -24,10 +24,6 @@ run `npm run start:dev`
 
 This endpoint return a paginated list of commits of specific project **visible to the user**
 
-### 2. Get a specific project
-
-`/repos`
-
 Returns the [project details] for a repo
 
 To return information you should specified a req.body data
