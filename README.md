@@ -10,7 +10,10 @@ It has the following structure:
 ## Installation
 
 Execute the comand `yarn install`
+
 Add a `.env` file 
+}
+run npm run start:dev
 
 ## Endpoints ☀️
 
@@ -30,6 +33,7 @@ To return information you should specified a req.body data
 
 const body = `{
                     "userName": **User name owner of the project**,
+                    
                     "repoName": **The name of the repository from which you want to obtain information.**,
                   }`;
 ```
