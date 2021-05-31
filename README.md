@@ -28,10 +28,10 @@ Returns the [project details] for a repo
 
 To return information you should specified a req.body data
 
-const body = `{
-                    "userName": **User name owner of the project**,
-                    
-                    "repoName": **The name of the repository from which you want to obtain information.**,
+```
+const bodyData = `{
+                   "userName": "User name owner of the project",
+                   "repoName": **The name of the repository from which you want to obtain information.**
                   }`;
 ```
 
