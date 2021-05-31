@@ -4,7 +4,7 @@ import {getCommitForSpecificUser} from "../controllers/commit-by-user.controller
 const router = express.Router();
 
 router.route('/')
-    .get(getCommitForSpecificUser);
+    .post(getCommitForSpecificUser);
 
 
 module.exports = router;
