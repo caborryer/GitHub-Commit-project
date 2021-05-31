@@ -7,6 +7,11 @@ It has the following structure:
 
 `http://localhost:4000/api/v1.0.0`
 
+## Installation
+
+Execute the comand `yarn install`
+Add a `.env` file 
+
 ## Endpoints ☀️
 
 ### 1. Get all commits for specific project
