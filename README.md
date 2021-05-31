@@ -13,6 +13,7 @@ Execute the comand `yarn install`
 
 Add a `.env` file 
 }
+
 run npm run start:dev
 
 ## Endpoints ☀️
