@@ -6,8 +6,14 @@ const logger = log4js.getLogger();
 
 export async function connectWithGitHubApi(username, repoName) {
 
-    let URL = `https://api.github.com/repos/${username}/${repoName}/commits`;;
-    return axios.get(URL)
+    let URL = `https://api.github.com/repos/${username}/${repoName}/commits`;
+    let config = {
+        headers: {
+            'Authorization': process.env.TOKEN,
+        }
+    };
+
+    return axios.get(URL, config)
         .then(response => {
             return response.data;
         })
